@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
 	
 	rasterizeArcs();
 	char filename[50];
-	sprintf(filename, "circle%d.ppm");	
+	sprintf(filename, "circle.ppm");	
 	ofstream outfile(filename);
 	outfile << "P3\n# " << filename << "\n";
 	outfile << size+1 << ' ' << size+1 << ' ' << 1 << endl;
