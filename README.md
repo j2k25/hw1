@@ -53,40 +53,6 @@ numbers, but I couldn't find the coding methods to do it.)
 ONE:========================================================================================================================================
 
 
-//OpenGL >= 3.2
-//Reference Card:
-
-
-//More References and Tutorials
-//• http://learnopengl.com
-//• OpenGL 3.3 Quick Reference Card:
-//https://www.khronos.org/files/opengl-quick-reference-card.pdf
-
-
-
-//g++ hw1.cpp -o hw1
-//hw1 200
-
-
-/*******************************************************
- * Homework 1: Rasterization                           *
- * CS 148 (Summer 2016), Stanford University           *
- *-----------------------------------------------------*
- * Here you will implement the circle rasterization    *
- * method you derived in the written portion of the    *
- * homework.                                           *
- * To compile this in linux:                           *
- *        g++ hw1.cpp                                  *
- * Then, run the program as follows:                   *
- *        ./a.out 200                                  *
- * to generate a 200x200 image containing a circular   *
- * arc.  Note that the coordinate system we're using   *
- * places pixel centers at integer coordinates and     *
- * has the origin at the lower left.                   *
- * Your code will generate a .ppm file containing the  *
- * final image. These images can be viewed using       *
- * "display" in Linux or Irfanview in Mac/Windows.     *
- *******************************************************/
 
 #include <conio.h>
 #include <iostream>
@@ -98,9 +64,7 @@ using namespace std;
 
 
 
-// We'll store image info as globals; not great programming practice
-// but ok for this short program.
-//int r;
+
 int size = 400;
 bool **image;
 
@@ -138,11 +102,11 @@ void CirclePoints( int x, int y, int value)
 	WritePixel(-y, -x, value);
 	WritePixel(-y, x, value);
 	WritePixel(-x, y, value); 
-}/* '* CirclePoints *'*/
+}
+*/
 
 
-void MidpointCircle(int radius) //, int value) 
-/*'* Assumes center of circle is at origin. Integer arithmetic only *'*/
+void MidpointCircle(int radius) 
 {
 	/*
 	int x = 200;
@@ -218,18 +182,9 @@ void MidpointCircle(int radius) //, int value)
 
 void rasterizeArc() 
 {
-	// TODO:  rasterize the arc using renderPixel to light up pixels
 
-	
-	
-	//void MidpointCircle (int radius, int value)
-	MidpointCircle(100); //, value);
-	MidpointCircle(150); //, value);
-
-
-
-
-
+	MidpointCircle(100); 
+	MidpointCircle(150);
 
 }
 
@@ -288,40 +243,6 @@ numbers, but I couldn't find the coding methods to do it.)
 THREE:=============================================================================================================================================
 
 
-//OpenGL >= 3.2
-//Reference Card:
-
-
-//More References and Tutorials
-//• http://learnopengl.com
-//• OpenGL 3.3 Quick Reference Card:
-//https://www.khronos.org/files/opengl-quick-reference-card.pdf
-
-
-
-//g++ hw1.cpp -o hw1
-//hw1 200
-
-
-/*******************************************************
- * Homework 1: Rasterization                           *
- * CS 148 (Summer 2016), Stanford University           *
- *-----------------------------------------------------*
- * Here you will implement the circle rasterization    *
- * method you derived in the written portion of the    *
- * homework.                                           *
- * To compile this in linux:                           *
- *        g++ hw1.cpp                                  *
- * Then, run the program as follows:                   *
- *        ./a.out 200                                  *
- * to generate a 200x200 image containing a circular   *
- * arc.  Note that the coordinate system we're using   *
- * places pixel centers at integer coordinates and     *
- * has the origin at the lower left.                   *
- * Your code will generate a .ppm file containing the  *
- * final image. These images can be viewed using       *
- * "display" in Linux or Irfanview in Mac/Windows.     *
- *******************************************************/
 
 #include <conio.h>
 #include <iostream>
@@ -338,15 +259,8 @@ bool **image;
 void rasterizeArcs() 
 {
 
-
-/*
-we will rasterize the half of the circle x2 + y2 = R2 
-where x >= 0 and positive integer R = 100 and the half 
-of the circle x2 + y2 = R2 where y >= 0 and positive
-integer R = 150.
-*/
-    int x  = 0;//200;
-    int y  = 0;//200;
+ 	int x  = 0;//200;
+  	int y  = 0;//200;
 	int x2 = 0;//200;
 	int y1 = 0;//200;
 	complex<double> y2 = 0;//200;
@@ -415,16 +329,7 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	
-/*#ifdef _WIN32
-//	sscanf_s(argv[1], "%d", &size);
-//#else
-	//sscanf(argv[1], "%d", &size);
-//#endif
-	if (size <= 0) {
-		cout << "Image must be of positive size.\n";
-		return 0;
-	}
-*/	
+	
 	// reserve image as 2d array
 	image = new bool*[size+1];
 	for (int i = 0; i <= size; i++) image[i] = new bool[size+1];
@@ -433,11 +338,8 @@ int main(int argc, char *argv[]) {
 	rasterizeArcs();
 	
 	char filename[50];
-//#ifdef _WIN32
-//	sprintf_s(filename, 50, "circle%d.ppm", size);
-//#else
+
 	sprintf(filename, "circle%d.ppm", size);
-//#endif
 	
 	ofstream outfile(filename);
 	outfile << "P3\n# " << filename << "\n";
