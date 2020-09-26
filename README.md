@@ -1,10 +1,13 @@
 # CG_hw1
 
 OS: Windows 10;
+
 IDE: NotePad++ and commandline g++ through MinGW;
 
 C:\> ./g++ hw1.cpp -o hw1
+
 C:\> ./hw1
+
 
 Thank you for giving us the reading and a basic assignment. I struggled
 to use the given algorithm and gave up at the last minute even though I 
