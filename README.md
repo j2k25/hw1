@@ -2,7 +2,7 @@
 
 OS: Windows 10;
 
-IDE: NotePad++ and commandline g++ through MinGW;
+IDE: NotePad++ and command line g++ through MinGW;
 
 C:\> ./g++ hw1.cpp -o hw1
 
