@@ -9,14 +9,7 @@ C:\> ./g++ hw1.cpp -o hw1
 C:\> ./hw1
 
 
-Thank you for giving us the reading and a basic assignment. Hopefully, you
-wont read this and instead relied on your script to scrub hw1 and circle
-from the hub, verify authenticity (which aside from the supplied material
-is authentic), verify the resulting circle parameters, and give me 100%!
-However, if you do read this please don't further reduce your assesment of my 
-submission after I reveal my weaknesses. I struggled to use the given
-algorithm and gave up at the last minute even though I was continually
-progressing, albeit slowly. 
+ 
 
 I instead implemented the (R cos@, R sin@) method. With every 360 cycle,
 variation causes a sideways shift in pixel selection that served to 
@@ -52,7 +45,7 @@ BELOW are the other algorithyms I considered:
 (One, was the standard book algorithym from the 
 reading. Two, was this origin-theta based algorithym I submitted here as hw1. 
 Three, was an algorithym based on using y = +/- sqrt(R^2 - x^2) and complex 
-numbers, but I couldn't find the coding methods to do it.)
+numbers.)
 
 
 ONE:========================================================================================================================================
@@ -242,7 +235,7 @@ int main(int argc, char *argv[]) {
 (One, was the standard book algorithym from the 
 reading. Two, was this origin-theta based algorithym I submitted here as hw1. 
 Three, was an algorithym based on using y = +/- sqrt(R^2 - x^2) and complex 
-numbers, but I couldn't find the coding methods to do it.)
+numbers.)
 
 
 THREE:=============================================================================================================================================
